@@ -62,7 +62,7 @@ class Element < `dom_class`
   expose :hide, :show, :toggle, :children, :blur, :closest, :data
   expose :focus, :find, :next, :siblings, :text, :trigger, :append
   expose :height, :width, :serialize, :is, :filter, :last, :first
-  expose :wrap, :stop, :clone, :empty
+  expose :wrap, :stop, :clone, :empty, :replaceWith
   expose :get, :attr, :prop
 
   # We alias some jquery methods to common ruby method names.
@@ -88,6 +88,7 @@ class Element < `dom_class`
   alias_native :slide_up, :slideUp
   alias_native :slide_toggle, :slideToggle
   alias_native :fade_toggle, :fadeToggle
+  alias_native :replace_with, :replaceWith
 
   def to_n
     self
